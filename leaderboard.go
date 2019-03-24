@@ -116,11 +116,7 @@ func getCorrectSubmissions(studentID uuid.UUID, questionIDs []uuid.UUID) int {
 			log.Fatal(err)
 		}
 	}
-	count := 0
-	for range questionSet {
-		count++
-	}
-	return count
+	return len(questionSet)
 }
 
 func getUser(userID uuid.UUID) (string, int) {
